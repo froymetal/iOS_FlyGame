@@ -24,9 +24,10 @@ struct Machine: View {
                 HStack(spacing: 0){
                     ForEach((0...self.columns - 1), id: \.self) { col in
                         VStack (spacing: 0) {
-                            Rectangle()
-                                .frame(width: self.size, height: self.size)
-                                .foregroundColor(self.machineBlocks[row][col])
+                            Pixel(size: self.size, color: self.machineBlocks[row][col])
+//                            Rectangle()
+//                                .frame(width: self.size, height: self.size)
+//                                .foregroundColor(self.machineBlocks[row][col])
                         }
                     }
                 }
